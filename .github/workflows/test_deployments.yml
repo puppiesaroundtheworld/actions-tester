@@ -36,6 +36,9 @@ jobs:
         
       - name: Print workflow_dispatch
         run: echo ${{ github.event_name }}
+        
+      - name: Check event_name is workflow_dispatch
+        run: echo ${{ github.event_name == 'workflow_dispatch' }}
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
